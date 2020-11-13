@@ -1,13 +1,11 @@
-// import logo from './logo.svg';
-
 import React from "react";
+import {connect} from 'react-redux'
+import {fetchLooks} from './actions/fetchLooks'
 
 class App extends React.Component {
-  // componentDidMount() {
-  //   fetch('http://localhost:3000/api/v1/products')
-  //   .then(res => res.json())
-  //   .then(data => console.log(data)) 
-  // }
+  componentDidMount() {
+     this.props.fetchLooks
+  }
   
   render() {
     return (
@@ -18,4 +16,5 @@ class App extends React.Component {
 }
 }
 
-export default App;
+
+export default connect(null, {fetchLooks})(App);
