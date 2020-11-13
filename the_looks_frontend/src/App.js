@@ -1,20 +1,19 @@
 import React from "react";
-import {connect} from 'react-redux'
-import {fetchLooks} from './actions/fetchLooks'
+import {connect} from 'react-redux';
+import ProductsContainer from './containers/ProductsContainer'
+
 
 class App extends React.Component {
-  componentDidMount() {
-     this.props.fetchLooks
-  }
+  
   
   render() {
     return (
       <div className="App">
-        App
+        <ProductsContainer/>
       </div>
   );
 }
 }
 
 
-export default connect(null, {fetchLooks})(App);
+export default App;
