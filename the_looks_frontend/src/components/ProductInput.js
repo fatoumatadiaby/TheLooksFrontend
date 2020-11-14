@@ -2,9 +2,11 @@ import React from 'react'
 
  class ProductInput extends React.Component {
    render() {
-     return <div>
-       ProductInput
-       </div>;
+     return (
+         <div>
+           <label></label>
+        </div>
+     )
    }
  }
  export default ProductInput;
