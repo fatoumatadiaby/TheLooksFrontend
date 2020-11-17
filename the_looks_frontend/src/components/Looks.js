@@ -5,7 +5,7 @@ const Looks = (props) => {
 
     <div>
       {props.looks.looks.map(look => 
-        <li> {look.attributes.title} </li>
+        <li key={look.id}>  {look.attributes.title} </li>
       )}
     </div>
   );

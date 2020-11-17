@@ -13,7 +13,7 @@ class LooksContainer extends React.Component {
   render() {
     return (
       <div>
-        <LookForm />
+        <LookForm /><br></br>
         <Looks looks={this.props.looks} />
       </div>
     );

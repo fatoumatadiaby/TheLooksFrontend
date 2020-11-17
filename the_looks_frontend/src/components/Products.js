@@ -6,7 +6,7 @@ const Products = (props) => {
     return (
         <div>
           {props.products.products.map(product => 
-          <li> {product.attributes.category} - {product.attributes.product_name}</li>
+          <li key={product.id}> {product.attributes.category} - {product.attributes.product_name}</li>
              )}
            
         </div>

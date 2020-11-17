@@ -6,6 +6,7 @@ export function fetchLooks() {
          dispatch({
            type: "FETCH_LOOKS",
            payload: looks.data
+          
          })
        );
    };

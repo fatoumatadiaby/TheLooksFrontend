@@ -4,6 +4,8 @@ export default function lookReducer(state = {looks: []}, action) {
  switch (action.type) {
    case "FETCH_LOOKS":
      return { looks: action.payload };
+    case "ADD_LOOK" :
+      return {...state, looks: [...state.looks, action.payload]}
    default:
      return state;
  }

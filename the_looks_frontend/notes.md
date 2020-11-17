@@ -62,7 +62,7 @@ import React from "react"
  class UserLogin extends React.Component {
    render() {
     return (
-      <div>
+      <!-- <div>
         <form>
             <label> First Name </label>
             <input type='text'placeholder='First Name'/> 
@@ -70,7 +70,7 @@ import React from "react"
      </div>
    )
     }
- }
+ } -->
  export default UserLogin;
 
  FETCH USER LOGIN 
@@ -114,3 +114,5 @@ INDEX
   // import userReducer from "./reducers/userReducer";
 // import currentUserReducer from "./reducers/userReducer";
 // import userLoginReducer from "./reducers/userLoginReducer";
+
+SESSIONS
