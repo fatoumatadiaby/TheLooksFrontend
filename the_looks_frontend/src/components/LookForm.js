@@ -18,6 +18,11 @@ handleChange = (event) => {
 handleSubmit = (event) => {
   event.preventDefault()
   this.props.addLook(this.state)
+  this.setState({
+    title: "",
+    note: "",
+    date: ""
+  });
 }
 
   render() {

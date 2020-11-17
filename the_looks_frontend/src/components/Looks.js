@@ -1,11 +1,12 @@
 import React from "react";
+import Look from './Look'
 
 const Looks = (props) => {
     return (
 
     <div>
-      {props.looks.looks.map(look => 
-        <li key={look.id}>  {look.attributes.title} </li>
+      {props.looks.map(look => 
+        <div key={look.id}><Look look={look}/></div>
       )}
     </div>
   );
