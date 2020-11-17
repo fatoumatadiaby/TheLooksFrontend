@@ -1,4 +1,3 @@
-import Products from "../components/Products";
 
 export function fetchProducts() {
     return (dispatch) => {
@@ -11,4 +10,3 @@ export function fetchProducts() {
 
     }
 }
-export default Products 

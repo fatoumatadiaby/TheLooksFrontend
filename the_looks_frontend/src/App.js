@@ -1,6 +1,7 @@
 import React from "react";
-import {connect} from 'react-redux';
+// import {connect} from 'react-redux';
 import ProductsContainer from './containers/ProductsContainer'
+import LooksContainer from "./containers/LooksContainer";
 
 
 class App extends React.Component {
@@ -10,6 +11,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <ProductsContainer/>
+        <LooksContainer/>
       </div>
   );
 }

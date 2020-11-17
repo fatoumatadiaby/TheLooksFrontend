@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import {fetchProducts} from '../actions/fetchProducts'
 import Products from '../components/Products'
-import ProductInput from '../components/ProductInput';
+import ProductForm from '../components/ProductForm';
 
 class ProductsContainer extends React.Component {
     componentDidMount() {
@@ -13,7 +13,7 @@ class ProductsContainer extends React.Component {
     render() {
          return (
              <div> 
-                <ProductInput/>
+                <ProductForm/>
                 <Products products={this.props.products}/>
              </div>
          )

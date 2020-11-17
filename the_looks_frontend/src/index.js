@@ -1,16 +1,23 @@
+import { createStore, applyMiddleware, compose, combineReducers } from "redux";
+import thunk from "redux-thunk";
+import productReducer from "./reducers/productReducer";
+import lookReducer from "./reducers/lookReducer";
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import {createStore, applyMiddleware, compose} from 'redux'
-// import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
-// import productReducer from './reducers/productReducer'
-// import userReducer from './reducers/userReducer'
 import App from './App';
-import store from './store'
 
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-// let store = createStore(productReducer,userReducer, composeEnhancers(applyMiddleware(thunk)));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+
+const reducer = combineReducers({
+  
+  products: productReducer,
+  looks: lookReducer 
+});
+
+let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <Provider store={store}>

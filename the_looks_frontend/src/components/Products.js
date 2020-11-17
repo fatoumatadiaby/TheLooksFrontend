@@ -2,12 +2,13 @@ import React from "react";
 
 
 const Products = (props) => {
-   
+
     return (
         <div>
-           {props.products.map(product => 
-            <li> {product.attributes.category} - {product.attributes.product_name}</li>
-            )}
+          {props.products.products.map(product => 
+          <li> {product.attributes.category} - {product.attributes.product_name}</li>
+             )}
+           
         </div>
     )
 
@@ -15,3 +16,5 @@ const Products = (props) => {
 }
 
 export default Products;
+
+// const { products } = props.products;
