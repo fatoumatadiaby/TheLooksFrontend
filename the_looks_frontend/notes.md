@@ -1,4 +1,4 @@
-USER REDUCER
+<!-- USER REDUCER
 
 export default function currentUserReducer(state = { user: [] }, action) {
   switch (action.type) {
@@ -29,11 +29,11 @@ export default function userLoginReducer(state = { initialState: [] }, action) {
     default:
       return state;
   }
-};
+}; -->
 
 
 
-CURRENT USER REDUCER
+<!-- CURRENT USER REDUCER
 
 export default function currentUserReducer(state = { user: [] }, action) {
   switch (action.type) {
@@ -116,3 +116,10 @@ INDEX
 // import userLoginReducer from "./reducers/userLoginReducer";
 
 SESSIONS
+
+
+
+product container
+  -->
+
+ 

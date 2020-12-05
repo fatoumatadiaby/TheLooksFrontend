@@ -1,18 +1,20 @@
 import React from "react";
+//  import {Route, Link} from 'react-router-dom'
 
 const Products = (props) => {
-  return (
+    return (
     <div>
-      {props.products.products.map((product) => (
-        <li key={product.id}>
+      { props.products.products.map((product) => ( 
+         <li key={product.id}>
           {" "}
-          {product.attributes.category} - {product.attributes.product_name}
-        </li>
+         {product.category} - {product.product_name} 
+         </li>
       ))}
+      
     </div>
   );
 };
 
 export default Products;
 
-// const { products } = props.products;
+// -{product.price} - {product.store} - {product.url}
