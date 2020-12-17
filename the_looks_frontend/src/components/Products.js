@@ -1,20 +1,23 @@
 import React from "react";
+import {StylePage, Li} from './Static'
 //  import {Route, Link} from 'react-router-dom'
 
 const Products = (props) => {
-    return (
-    <div>
-      { props.products.products.map((product) => ( 
-         <li key={product.id}>
-          {" "}
-         {product.category} - {product.product_name} 
-         </li>
-      ))}
-      
-    </div>
-  );
+    // debugger;
+  return (
+      <div>
+        <StylePage>
+          {props.look && props.look.products.map((product) => (
+            <Li key={product.id}>
+              {" "}
+             Product Name: {product.product_name} <br></br>   
+              Store: {product.store} <br></br> Website Link: {product.url}
+            </Li>
+          ))}
+        </StylePage>
+      </div>
+    );
 };
 
 export default Products;
 
-// -{product.price} - {product.store} - {product.url}

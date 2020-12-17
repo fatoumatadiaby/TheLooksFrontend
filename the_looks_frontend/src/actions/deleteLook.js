@@ -1,11 +1,12 @@
-export const deleteLook = (lookId) => {
+export const deleteLook = (id) => {
   return (dispatch) => {
-    return fetch("http://localhost:3000/looks", {
+    return fetch(`http://localhost:3000/looks/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
-      .then((res) =>
-        dispatch({ type: "DELETE_LOOK", payload: lookId })
+      .then((look) => 
+        dispatch({ type: "DELETE_LOOK", payload: look })
       );
   };
 };
+

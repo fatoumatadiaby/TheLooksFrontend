@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import productReducer from "./reducers/productReducer";
 import lookReducer from "./reducers/lookReducer";
+// import productReducer from "./reducers/productReducer"
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -10,12 +10,12 @@ import App from "./App";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const reducer = combineReducers({
-  products: productReducer,
-  looks: lookReducer,
-});
+// const rootReducer = combineReducers({
+//   lookReducer,
+//   // productReducer
+// });
 
-let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
+const store = createStore(lookReducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <Provider store={store}>

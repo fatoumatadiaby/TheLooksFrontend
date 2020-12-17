@@ -1,21 +1,26 @@
 import React from "react";
-// import {Redirect} from 'react-router-dom'
+// import looksContainer from "../containers/looksContainer";
 import ProductsContainer from "../containers/ProductsContainer";
+import { StylePage, Li } from "./Static";
+
 
 const Look = (props) => {
-// debugger;
-    let look = props.looks.looks[props.match.params.id - 1];
-    console.log(look)
-    return (
-      <div>
+  // let look = props.looks[props.match.params.id -1];
+
+  let look = props.looks.filter((looks) => {return looks.id == props.match.params.id})[0]
+
+  // debugger;
+
+  return (
+    <div>
+      <StylePage>
         <h2>
-          {look ? look.title : null} -{" "}
-          {look ? look.note : null} -{" "}
-          {look ? look.date : null}
+          <Li> Title: {look ? look.title : null} </Li>
+          <Li>Notes: {look ? look.note : null} </Li>
         </h2>
-        <ProductsContainer look={look}/>
-        
-      </div>
-    );
+        <ProductsContainer look={look} />
+      </StylePage>
+    </div>
+  );
 }
 export default Look 

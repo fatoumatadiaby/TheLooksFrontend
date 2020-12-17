@@ -10,7 +10,9 @@ export const addLook = (data) => {
        body: JSON.stringify(data)
      })
        .then(response => response.json())
-       .then(look => dispatch({type: 'ADD_LOOK', payload: look}))
+       .then(look => dispatch({
+         type: 'ADD_LOOK', 
+         payload: look}))
     
    }
 }

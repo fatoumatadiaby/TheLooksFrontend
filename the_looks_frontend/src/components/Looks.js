@@ -1,21 +1,29 @@
 import React from "react";
-import Look from './Look'
 import {Link} from 'react-router-dom'
+import { StylePage, Li } from "./Static";
+import { connect } from "react-redux";
+import  {deleteLook}  from "../actions/deleteLook";
 
 const Looks = (props) => {
-  // const handleDelete = () => {};
+  
+  const handleDelete = (look) => {
+     props.deleteLook(look.id);
+   };
  return (
    <div>
-     {props.looks.looks.map((look) => (
-       <div key={look.id}>
-         <Link to={`/looks/${look.id}`}>
-           {look.title} <button>Delete</button>
-         </Link>
-       </div>
-     ))}
+     <StylePage>
+       {props.looks.map((look) => (
+         <div key={look.id}>
+           <Li>
+             {" "}
+             <Link to={`/looks/${look.id}`}>{look.title}</Link><button onClick={()=> handleDelete(look)}>Delete</button>
+           </Li>
+         </div>
+       ))}
+     </StylePage>
    </div>
  );
 };
 
-export default Looks;
+export default connect(null, { deleteLook })(Looks);
 

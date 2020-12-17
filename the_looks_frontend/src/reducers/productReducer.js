@@ -1,13 +1,13 @@
-export default function productReducer(state = {products: []}, action) {
+// export default function productReducer(state = {products: []}, action) {
   
-    switch (action.type) {
-        case 'FETCH_PRODUCTS':
-            return {products: action.payload}
-        default:
-            return state
-    }
+//     switch (action.type) {
+//         case 'FETCH_PRODUCTS':
+//             return {products: action.payload}
+//         default:
+//             return state
+//     }
     
 
   
 
-}
+// }

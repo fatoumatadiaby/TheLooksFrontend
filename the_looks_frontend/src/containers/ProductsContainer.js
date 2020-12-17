@@ -1,28 +1,22 @@
 import React from "react";
-import { connect } from "react-redux";
-import { Route, Switch } from "react-router-dom";
-import { fetchProducts } from "../actions/fetchProducts";
+
 import Products from "../components/Products";
+import ProductForms from "../components/ProductForms";
 
 class ProductsContainer extends React.Component {
-  componentDidMount() {
-    this.props.fetchProducts();
-  }
+ 
 
   render() {
     return (
       <div>
-        {/* <Route exact path="/products" render={(routerProps) => (  <Products {...routerProps} products={this.props.products} /> )} /> */}
-
-        <Products products={this.props.look && this.props.look.products} />
-      </div>
+        <Products look={this.props.look && this.props.look}/>
+        <ProductForms look={this.props.look && this.props.look} />
+     </div>
     );
   }
 }
-const mapStateToProps = (state) => {
-  return {
-    products: state.products
-  };
-};
 
-export default connect(mapStateToProps, { fetchProducts })(ProductsContainer);
+
+
+
+export default ProductsContainer
